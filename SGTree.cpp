@@ -57,7 +57,7 @@ public:
 		return a;
 	}
 	void update(int ind, int low, int high, int l, int r, int val) {
-		cout<<low<<" "<<ind<<" "<<high<<endl;
+// 		cout<<low<<" "<<ind<<" "<<high<<endl;
 		// check for the pending laz and propogates downwards
 		if(seg[ind].laz!=0){
 			seg[ind].val+=(high-low+1)*seg[ind].laz;
@@ -80,7 +80,7 @@ public:
 			}
 			return;
 		}
-	// partial ppoverlaps
+	// partial overlaps
 	
 		int mid = (low + high) >> 1;
 		update(2 * ind + 1, low, mid, l, r,val);
