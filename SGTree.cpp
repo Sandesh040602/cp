@@ -1,6 +1,6 @@
 
 // the below link is only for segment tree can be used but without lazy propogation
-// link https://github.com/striver79/Competitive_Codes-/blob/master/STsum_update.cpp
+// https://github.com/striver79/Competitive_Codes-/blob/master/STsum_update.cpp
 
 // with lazyprop
 class node{
