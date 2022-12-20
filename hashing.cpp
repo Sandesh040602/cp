@@ -25,4 +25,5 @@ int count_unique_substrings(string const& s) {
     return cnt;
 }
 // if this is not working then might be cause of collision
-// try increasing m(the modulo term)
+// 1. try increasing m(the modulo term)
+// 2. try using pair hashing in which we used calculate the two different hash to decrease the hashing collision
