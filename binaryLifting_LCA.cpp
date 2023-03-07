@@ -1,3 +1,10 @@
+void dfs(int node,int level ,vector<vector<int>>&child){
+    lvl[node] = level;
+    for(int i=0;i<child[node].size();i++){
+        dfs(child[node][i], level+1, child);
+    }
+}
+
 // this is binary search  appproach on lca it costs o(logN * logN)
 int lca1(int a, int b){
     if(lvl[a]>lvl[b]){swap(a,b);}
