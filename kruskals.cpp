@@ -42,3 +42,4 @@ int kruskals(vector<pipi>&edges, int n){
     }
     return cost;
 }
+// time complexity O(ELogE + ELogV)
