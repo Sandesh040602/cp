@@ -4,7 +4,17 @@ void dfs(int node,int level ,vector<vector<int>>&child){
         dfs(child[node][i], level+1, child);
     }
 }
-
+// finding the answer
+int ans_query(int node, int jump_required){
+    if(node==-1 || jump_required==0){
+        return node;
+    }
+    for(int i=19;i>=0;i--){
+        if(jump_required>=(1<<i)){
+            return ans_query(pre[node][i], jump_required-(1<<i));
+        }
+    }
+}
 // this is binary search  appproach on lca it costs o(logN * logN)
 int lca1(int a, int b){
     if(lvl[a]>lvl[b]){swap(a,b);}
