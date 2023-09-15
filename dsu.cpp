@@ -22,3 +22,18 @@ void union_sets(int a, int b) {
         size[a] += size[b];
     }
 }
+////////////////////////////////// DSU ENDS HERE
+//////////////////////////////topo sort starts here
+    9void toposort_dfs(vector<int>&cans, int node, vector<vector<int>>&edges, vector<int>&vis){
+        if(vis[node]){return;}
+        vis[node] = 1;
+        for(int i=0;i<edges[node].size();i++){
+            if(!vis[edges[node][i]]){
+                toposort_dfs(cans, edges[node][i], edges, vis);
+            }
+        }
+        cans.push_back(node);
+        return;
+    }
+
+
